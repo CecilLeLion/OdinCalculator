@@ -118,3 +118,24 @@ function multiplication(a,b) {
 function division(a, b) {
     return a / b;
 }
+
+
+
+// Keyboard Support
+window.addEventListener('keydown', keyboardInput)
+
+function keyboardInput(e) {
+    if (e.key >= 0 && e.key <=9) appendNumber(e.key);
+    if (e.key === '*' || e.key === 'x' || e.key === '/' || e.key === '+' || e.key === '-') operate(convertToOperator(e.key));
+    if (e.key === '=' || e.key === 'Enter') equate();
+    if (e.key === 'Backspace' || e.key === 'Delete') del();
+    if (e.key === 'Escape') clear();
+    if (e.key === '.') appendNumber(e.key);
+}
+
+function convertToOperator(operator) {
+    if(operator === '*' || operator === 'x') return 'x';
+    if(operator === '/') return '/';
+    if(operator === '+') return '+'
+    if(operator === '-') return '-'
+}
