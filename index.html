@@ -3,35 +3,36 @@
     <meta charset="utf-8">
     <title>Odin Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="pageContent">
         <div class="calcBody">
             <div class="display">
-                <p class="equation">123 + 456</p>
-                <p class="numDis">12345</p>
+                <p class="equation" id="eqn"></p>
+                <p class="numDis" id="numDis"></p>
             </div>
             <div class="corrections">
                 <button class="cor" id="clr">clear</button>
                 <button class="cor" id="del">delete</button>
             </div>
-            <div class="inputs">
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">x</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">÷</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">+</button>
-                <button class="btn">.</button>
-                <button class="btn">0</button>
-                <button class="btn">=</button>
-                <button class="btn">-</button>
+            <div class="inputs" id="inputs">
+                <button class="btn" id="nums" data-number>1</button>
+                <button class="btn" id="nums" data-number>2</button>
+                <button class="btn" id="nums" data-number>3</button>
+                <button class="btn" id="multiply" data-operator>x</button>
+                <button class="btn" id="nums" data-number>4</button>
+                <button class="btn" id="nums" data-number>5</button>
+                <button class="btn" id="nums" data-number>6</button>
+                <button class="btn" id="divide" data-operator>÷</button>
+                <button class="btn" id="nums" data-number>7</button>
+                <button class="btn" id="nums" data-number>8</button>
+                <button class="btn" id="nums" data-number>9</button>
+                <button class="btn" id="add" data-operator>+</button>
+                <button class="btn" id="decimal" data-number>.</button>
+                <button class="btn" id="nums" data-number>0</button>
+                <button class="btn" id="equal">=</button>
+                <button class="btn" id="subtract" data-operator>-</button>
             </div>
         </div>
         <div class="footer">Copyright &copy; 2022 <a href="https://github.com/cecillelion">Dylan Hickey</a></div>
