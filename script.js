@@ -43,51 +43,51 @@ function equate() {
 function operate(operator, a, b) {
         if(inputDisplay.textContent.includes('+')) {
             const inputArray = inputDisplay.textContent.split('+');
-            let a = parseFloat(inputArray[0]).toFixed(2);
-            let b = parseFloat(inputArray[1]).toFixed(2)
-            answerDisplay.textContent = addition(a, b);
+            let a = parseFloat(inputArray[0]);
+            let b = parseFloat(inputArray[1]);
+            answerDisplay.textContent = (Math.round(addition(a, b)*1000)/1000);
             if(operator === undefined) {
-                inputDisplay.textContent = addition(a, b);        
+                inputDisplay.textContent = (Math.round(addition(a, b)*1000)/1000);        
             }
             else {
-            inputDisplay.textContent = addition(a, b) + ` ${operator} `;
+            inputDisplay.textContent = (Math.round(addition(a, b)*1000)/1000) + ` ${operator} `;
             }
         } else if (inputDisplay.textContent.includes('-')) {
             const inputArray = inputDisplay.textContent.split('-');
-            let a = parseFloat(inputArray[0]).toFixed(2);
-            let b = parseFloat(inputArray[1]).toFixed(2)
-            answerDisplay.textContent = subtraction(a, b);
+            let a = parseFloat(inputArray[0]);
+            let b = parseFloat(inputArray[1]);
+            answerDisplay.textContent = (Math.round(subtraction(a, b)*1000)/1000);
             if(operator === undefined) {
-                inputDisplay.textContent = subtraction(a, b);        
+                inputDisplay.textContent = (Math.round(subtraction(a, b)*1000)/1000);        
             }
             else {
-                inputDisplay.textContent = subtraction(a, b) + ` ${operator} `;
+                inputDisplay.textContent = (Math.round(subtraction(a, b)*1000)/1000) + ` ${operator} `;
             }
         } else if (inputDisplay.textContent.includes('x')) {
             const inputArray = inputDisplay.textContent.split('x');
-            let a = parseFloat(inputArray[0]).toFixed(2);
-            let b = parseFloat(inputArray[1]).toFixed(2)
-            answerDisplay.textContent = multiplication(a, b);
+            let a = parseFloat(inputArray[0]);
+            let b = parseFloat(inputArray[1]);
+            answerDisplay.textContent = (Math.round(multiplication(a, b)*1000)/1000);
             if(operator === undefined) {
-                inputDisplay.textContent = multiplication(a, b);        
+                inputDisplay.textContent = (Math.round(multiplication(a, b)*1000)/1000);        
             }
             else {
-                inputDisplay.textContent = multiplication(a, b) + ` ${operator} `;
+                inputDisplay.textContent = (Math.round(multiplication(a, b)*1000)/1000) + ` ${operator} `;
             }
         } else if (inputDisplay.textContent.includes('÷')) {
             const inputArray = inputDisplay.textContent.split('÷');
-            let a = parseFloat(inputArray[0]).toFixed(2);
-            let b = parseFloat(inputArray[1]).toFixed(2);
+            let a = parseFloat(inputArray[0]);
+            let b = parseFloat(inputArray[1]);
             if(a === 0 || b === 0) {
                 alert(`Can't divide 0`)
                 return
             }
-            answerDisplay.textContent = division(a, b);
+            answerDisplay.textContent = (Math.round(division(a, b)*1000)/1000);
             if(operator === undefined) {
-                inputDisplay.textContent = division(a, b);        
+                inputDisplay.textContent = (Math.round(division(a, b)*1000)/1000);        
             }
             else {
-                inputDisplay.textContent = division(a, b) + ` ${operator} `;
+                inputDisplay.textContent = (Math.round(division(a, b)*1000)/1000) + ` ${operator} `;
             }
         } else {
             inputDisplay.textContent += ` ${operator} `;
